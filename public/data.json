@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "brand_name": "Apple",
+        "brand_image": "https://i.ibb.co/2ZTSwRs/jimmy-jin-Ia-Dn-LLFMqhk-unsplash.jpg",
+        "description": "Apple Inc. is a multinational technology company known for its iconic products, including the iPhone, iPad, Mac, and Apple Watch. They are also a leader in software and services with the App Store and iOS ecosystem."
+    },
+    {
+        "id": 2,
+        "brand_name": "Samsung",
+        "brand_image": "https://i.ibb.co/M86N7Z1/boliviainteligente-s6-Z3d1p-Ra2o-unsplash.jpg",
+        "description": "Samsung Electronics is a global leader in consumer electronics, mobile devices, and home appliances. They are renowned for their high-quality smartphones, televisions, and innovative technologies."
+    },
+    {
+        "id": 3,
+        "brand_name": "Sony",
+        "brand_image": "https://i.ibb.co/YBNSrcx/rubaitul-azad-G8-Pb-Ow-I7-Fa4-unsplash.jpg",
+        "description": "Sony Corporation is a diversified multinational corporation known for its products in electronics, gaming, entertainment, and imaging. They produce the popular PlayStation gaming consoles and a wide range of consumer electronics."
+    },
+    {
+        "id": 4,
+        "brand_name": "Microsoft",
+        "brand_image": "https://i.ibb.co/nfksGPx/boliviainteligente-w-IBDr-Ev73x-Y-unsplash.jpg",
+        "description": "LG Electronics is a global leader in home appliances, consumer electronics, and mobile communications. They produce a wide range of innovative products, including TVs, refrigerators, and smartphones."
+    },
+    {
+        "id": 5,
+        "brand_name": "LG",
+        "brand_image": "https://i.ibb.co/N9PNWpG/Artboard-2-100.jpg",
+        "description": "LG Electronics is a global leader in home appliances, consumer electronics, and mobile communications. They produce a wide range of innovative products, including TVs, refrigerators, and smartphones."
+    },
+    {
+        "id": 6,
+        "brand_name": "Panasonic",
+        "brand_image": "https://i.ibb.co/fGkg4hR/Artboard-1-100.jpg",
+        "description": "Panasonic Corporation is a multinational electronics corporation known for its products in consumer electronics, home appliances, and industrial solutions. They are pioneers in technology and innovation."
+    }
+]

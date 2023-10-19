@@ -1,9 +1,10 @@
+import BrandCards from "../components/BrandCardSection/BrandCards";
 
 
 const Home = () => {
     return (
-        <div>
-            <h2>home page</h2>
+        <div className="max-w-screen-xl mx-auto">
+            <BrandCards></BrandCards>
         </div>
     );
 };
