@@ -32,8 +32,8 @@ const myCreatedRoute = createBrowserRouter([{
             element: <Register></Register>
         },
         {
-            path: '/brandProducts/:id',
-            element: <BrandProducts></BrandProducts>,
+            path: '/products/:id',
+            element: <BrandProducts></BrandProducts>
         },
     ]
 }])
