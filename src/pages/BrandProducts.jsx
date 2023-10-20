@@ -5,7 +5,6 @@ import BrandCollections from "../components/BrandCollections";
 
 const BrandProducts = () => {
     const { id } = useParams();
-    console.log(id);
     const [brand, setBrand] = useState([]);
     const [products, setProducts] = useState([]);
     useEffect(() => {
@@ -16,7 +15,6 @@ const BrandProducts = () => {
                 setBrand(findBrand);
             })
     }, [id])
-    console.log(brand);
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
@@ -25,7 +23,6 @@ const BrandProducts = () => {
                 setProducts(filteredItems);
             });
     }, [brand.brand_name])
-    console.log(products);
 
 
     return (

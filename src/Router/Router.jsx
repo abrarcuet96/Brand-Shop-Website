@@ -6,6 +6,7 @@ import MyCart from "../pages/MyCart";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import BrandProducts from "../pages/BrandProducts";
+import ProductDetails from "../pages/ProductDetails";
 
 const myCreatedRoute = createBrowserRouter([{
     path: '/',
@@ -34,6 +35,10 @@ const myCreatedRoute = createBrowserRouter([{
         {
             path: '/products/:id',
             element: <BrandProducts></BrandProducts>
+        },
+        {
+            path: '/details/:id',
+            element: <ProductDetails></ProductDetails>
         },
     ]
 }])
