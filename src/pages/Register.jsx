@@ -1,14 +1,50 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
 
 
 const Register = () => {
+    const { createUser } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState('');
+    const handleRegister = e => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const name = form.get('name');
+        const email = form.get('email');
+        const password = form.get('password');
+        setRegisterError('');
+        setSuccess('');
+        if (password.length < 6) {
+            setRegisterError('Password should be at least 6 characters or longer');
+            return;
+        }
+        else if (!/^(?=.*[A-Z]).+$/.test(password)) {
+            setRegisterError('Your password should have at least one upper case character');
+            return;
+        }
+        else if (!/^(?=.*[\W_]).+$/.test(password)) {
+            setRegisterError('Your password should have at least one special character');
+            return;
+        }
+        createUser(name, email, password)
+            .then(res => {
+                console.log(res.user);
+                setSuccess('User created successfully');
+            })
+            .catch(err => {
+                console.log(err);
+                setRegisterError(err.message);
+            })
+    }
+
     return (
         <div className="border h-[80vh] flex items-center justify-center">
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 border-2 p-5">
                 <h4 className="block font-sans text-3xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
                     Register
                 </h4>
-                <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+                <form onSubmit={handleRegister} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                     <div className="mb-4 flex flex-col gap-6">
                         <div className="relative h-11 w-full min-w-[200px]">
                             <input type="text" name="name"
@@ -46,6 +82,12 @@ const Register = () => {
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Already have an account? <Link className="text-pink-500 font-semibold" to="/login">Login</Link>
                     </p>
+                    {
+                        registerError && <p className="text-red-600 text-center">{registerError}</p>
+                    }
+                    {
+                        success && <p className="text-green-600 text-center">{success}</p>
+                    }
                 </form>
             </div>
         </div>

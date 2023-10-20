@@ -1,14 +1,64 @@
-import { Link } from "react-router-dom";
-
+import { useContext, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Provider/AuthProvider";
+import { FaGoogle } from 'react-icons/fa';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+    const { signIn, googleSignIn } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleGoogleSignIn = () => {
+
+
+        googleSignIn()
+            .then(res => {
+                console.log(res.user);
+                toast("You are successfully logged in");
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+    }
+    const handleLogin = e => {
+        e.preventDefault();
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+        console.log(email, password);
+        setRegisterError('');
+        setSuccess('');
+        signIn(email, password)
+            .then(res => {
+                console.log(res.user);
+                if (res.user.emailVerified) {
+                    setSuccess('Logged in Successfully');
+                }
+                else {
+                    setSuccess('Please verify your email address');
+                }
+                console.log(res.user);
+                navigate(location?.state ? location.state : '/');
+
+            })
+            .catch(err => {
+                console.log(err);
+                setRegisterError(err.message);
+            })
+    }
     return (
         <div className="border h-[80vh] flex items-center justify-center">
             <div className="relative flex flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 border-2 p-5">
                 <h4 className="block font-sans text-3xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased text-center">
-                    Login 
+                    Login
                 </h4>
-                <form className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
+                <form onSubmit={handleLogin} className="mt-8 mb-2 w-80 max-w-screen-lg sm:w-96">
                     <div className="mb-4 flex flex-col gap-6">
                         <div className="relative h-11 w-full min-w-[200px]">
                             <input type="email" name="email"
@@ -35,10 +85,21 @@ const Login = () => {
                     >
                         Login
                     </button>
+                    <div className="text-center flex items-center bg-slate-300 rounded-lg p-2">
+                        <p className="mb-2 font-semibold">or, Login with google</p>
+                        <button onClick={handleGoogleSignIn} className="btn"><FaGoogle></FaGoogle></button>
+                        <ToastContainer></ToastContainer>
+                    </div>
                     <p className="mt-4 block text-center font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
                         Do not have an account? <Link className="text-pink-500 font-semibold" to="/register">Register</Link>
                     </p>
                 </form>
+                {
+                    registerError && <p className="text-red-600">{registerError}</p>
+                }
+                {
+                    success && <p className="text-green-600">{success}</p>
+                }
             </div>
         </div>
     );
