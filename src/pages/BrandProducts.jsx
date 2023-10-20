@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BrandCollections from "../components/BrandCollections";
+import NoProducts from "../components/NoProducts";
 
 
 const BrandProducts = () => {
@@ -27,7 +28,9 @@ const BrandProducts = () => {
 
     return (
         <div>
-            <div className="my-5 max-w-screen-xl mx-auto">
+            {
+                products.length<=0 ? '':
+                <div className="my-5 max-w-screen-xl mx-auto">
 
                 <div className="carousel w-full h-[80vh]">
                     <div id="slide1" className="carousel-item relative w-full">
@@ -61,12 +64,18 @@ const BrandProducts = () => {
                 </div>
 
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 max-w-screen-xl mx-auto">
+            }
+            
 
-                {
-                    products.map(product => <BrandCollections key={product._id} product={product}></BrandCollections>)
+                {products.length <= 0 ? <NoProducts></NoProducts>
+                    :
+                    <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-5 max-w-screen-xl mx-auto">
+                        {
+                            products.map(product => <BrandCollections key={product._id} product={product}></BrandCollections>)
+                        }
+                    </div>
                 }
-            </div>
+            
         </div>
     );
 };
