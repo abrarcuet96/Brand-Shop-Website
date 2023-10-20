@@ -17,7 +17,7 @@ const BrandCollections = ({ product }) => {
                     <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 text-xl">Rating: {rating}</p>
                 </div>
                 <div className='flex justify-end gap-2'>
-                    <button className='text-white text-2xl hover:text-fuchsia-500'><FiEdit></FiEdit></button>
+                    <Link to={`/updateProducts/${_id}`}><button className='text-white text-2xl hover:text-fuchsia-500'><FiEdit></FiEdit></button></Link>
                     <Link to={`/details/${_id}`}><button className='text-white text-2xl hover:text-fuchsia-500'><BsArrowRightCircle></BsArrowRightCircle></button></Link>
                 </div>
             </div>
