@@ -50,7 +50,7 @@ const NavBar = () => {
                 </div>
                 <div className="flex gap-2">
                     <div>
-                        <img className="w-8" src="bookmark_6442280.png" alt="" />
+                        <img className="w-8 max-sm:hidden" src="bookmark_6442280.png" alt="" />
                     </div>
                     <div>
                         <Link className="text-lg md:text-2xl font-bold text-white" to="/">Brand-Shop</Link>
@@ -65,8 +65,8 @@ const NavBar = () => {
             <div className="navbar-end">
                 {user ?
                     <>
-                        <div className="flex flex-col md:flex-row">
-                            <div className="bg-white mr-2 p-1 rounded-lg  w-full">
+                        <div className="flex flex-row">
+                            <div className="bg-white mr-2 p-1 rounded-lg max-sm:hidden  w-full">
                                 <span className="w-30 h-2 m-2 font-semibold">{user?.displayName}</span>
 
                             </div>
