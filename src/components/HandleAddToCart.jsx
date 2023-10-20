@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 const HandleAddToCart = ({handleAddToCart, product}) => {
     return (
         <div>
@@ -5,5 +6,8 @@ const HandleAddToCart = ({handleAddToCart, product}) => {
         </div>
     );
 };
-
+HandleAddToCart.propTypes={
+    handleAddToCart: PropTypes.func,
+    product: PropTypes.object
+}
 export default HandleAddToCart;
