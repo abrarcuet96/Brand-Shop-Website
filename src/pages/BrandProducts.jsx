@@ -17,7 +17,7 @@ const BrandProducts = () => {
             })
     }, [id])
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 const filteredItems = data.filter(product => product.brand_name == brand.brand_name);

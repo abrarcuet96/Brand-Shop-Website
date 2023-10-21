@@ -43,12 +43,12 @@ const myCreatedRoute = createBrowserRouter([{
         {
             path: '/updateProducts/:id',
             element: <PrivateRoutes><UpdateProductDetails></UpdateProductDetails></PrivateRoutes>,
-            loader: ({params})=> fetch(`http://localhost:5000/products/${params.id}`)
+            loader: ({params})=> fetch(`https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/products/${params.id}`)
         },
         {
             path: '/details/:id',
             element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-            loader: ()=> fetch('http://localhost:5000/cartProducts')
+            loader: ()=> fetch('https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/cartProducts')
         },
     ]
 }])

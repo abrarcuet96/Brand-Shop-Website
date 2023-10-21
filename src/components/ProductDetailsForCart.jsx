@@ -17,7 +17,7 @@ const ProductDetailsForCart = ({product, cartItems, setCartItems}) => {
         } else {
             const { name, photo, brand_name, price, description, type, rating } = product;
             const myProducts = { name, photo, brand_name, price, description, type, rating };
-            fetch('http://localhost:5000/cartProducts', {
+            fetch('https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/cartProducts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
