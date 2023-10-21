@@ -1,0 +1,16 @@
+.main{
+    color: black;
+}
+
+#light .main{
+    color: black;
+}
+#light .main_h:hover{
+    color:darkturquoise;
+}
+#dark .main{
+    color: white;
+}
+#dark .main_h:hover{
+    color:darkturquoise;
+}

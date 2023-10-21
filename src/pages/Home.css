@@ -1,0 +1,13 @@
+#light{
+    background-color: white;
+}
+#dark{
+    background-color:darkslategray;
+}
+
+#light .switch label{
+    color: black;
+}
+#dark .switch label{
+    color: white;
+}

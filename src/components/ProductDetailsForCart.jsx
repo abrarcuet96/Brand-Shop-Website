@@ -41,7 +41,7 @@ const ProductDetailsForCart = ({product, cartItems, setCartItems}) => {
 
     }
     return (
-        <div className=" max-w-screen-xl mx-auto mb-10 h-screen">
+        <div className=" max-w-screen-xl mx-auto mb-10 h-[70vh]">
             <div className="flex gap-5 flex-col lg:flex-row">
                 <div className="lg:w-1/2">
                     <img className="rounded-lg" src={photo} alt="" />

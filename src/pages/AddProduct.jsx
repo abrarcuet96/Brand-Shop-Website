@@ -1,4 +1,4 @@
-
+import Swal from 'sweetalert2';
 
 const AddProduct = () => {
     const handleAddProductSubmit = e => {
@@ -21,14 +21,22 @@ const AddProduct = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if(data.acknowledged){
-                    alert('Data posted')
+                if (data.acknowledged) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Product added successfully',
+                        icon: 'Success',
+                        confirmButtonText: 'Cool'
+                    })
                 }
-                console.log(data)});
+                console.log(data)
+            });
     }
     return (
 
-        <div className="max-w-screen-xl mx-auto my-20 p-10">
+        <div className="max-w-screen-xl mx-auto my-5 p-10">
+
+            <h2 className="text-center font-semibold text-4xl my-5">Add Product Details</h2>
             <form onSubmit={handleAddProductSubmit}>
                 <div className="relative z-0 w-full mb-6 group">
                     <input type="text" name="photo" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" required />
