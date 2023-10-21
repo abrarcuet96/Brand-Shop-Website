@@ -42,18 +42,18 @@ const ProductDetailsForCart = ({product, cartItems, setCartItems}) => {
     }
     return (
         <div className=" max-w-screen-xl mx-auto mb-10 h-screen">
-            <div className="flex gap-5">
-                <div className="w-1/2">
+            <div className="flex gap-5 flex-col lg:flex-row">
+                <div className="lg:w-1/2">
                     <img className="rounded-lg" src={photo} alt="" />
                 </div>
-                <div className="flex flex-col w-1/2">
-                    <div className="flex flex-col flex-grow">
-                        <p className="text-2xl"><span className="font-bold">Name:</span> {name}</p>
-                        <p className="text-2xl"><span className="font-bold">Brand name:</span> {brand_name}</p>
-                        <p className="text-2xl"><span className="font-bold">Price:</span> {price}</p>
-                        <p className="text-2xl"><span className="font-bold">Details:</span> {description}</p>
-                        <p className="text-2xl"><span className="font-bold">Type:</span> {type}</p>
-                        <p className="text-2xl"><span className="font-bold">Rating:</span> {rating}</p>
+                <div className="flex flex-col lg:w-1/2">
+                    <div className="flex flex-col mb-2 flex-grow">
+                        <p className="text-xl lg:text-2xl"><span className="font-bold">Name:</span> {name}</p>
+                        <p className="text-xl lg:text-2xl"><span className="font-bold">Brand name:</span> {brand_name}</p>
+                        <p className="text-xl lg:text-2xl"><span className="font-bold">Price:</span> {price}</p>
+                        <p className="text-xl lg:text-2xl"><span className="font-bold">Details:</span> {description}</p>
+                        <p className="text-xl lg:text-2xl"><span className="font-bold">Type:</span> {type}</p>
+                        <p className="text-xl lg:text-2xl"><span className="font-bold">Rating:</span> {rating}</p>
                     </div>
                     {
                         <HandleAddToCart handleAddToCart={handleAddToCart} product={product}></HandleAddToCart>

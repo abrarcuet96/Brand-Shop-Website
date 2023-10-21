@@ -9,10 +9,12 @@ import BrandProducts from "../pages/BrandProducts";
 import ProductDetails from "../pages/ProductDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import UpdateProductDetails from "../pages/UpdateProductDetails";
+import ErrorPage from "../pages/ErrorPage";
 
 const myCreatedRoute = createBrowserRouter([{
     path: '/',
     element: <MainLayout></MainLayout>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
         {
             path: '/',
