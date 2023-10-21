@@ -5,4 +5,4 @@ About my project:
 4. toggle theme to dark/light also implemented in the home page.
 5. login page has google authentication.
 
-live link: 
+live link: https://my-brand-shop-fad71.web.app/
