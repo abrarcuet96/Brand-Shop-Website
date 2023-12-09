@@ -13,4 +13,5 @@ Currently, two official plugins are available:
   <li>Customers can curate their future purchases by adding desired items to a personalized cart. This feature enhances convenience and allows for planned shopping experiences.</li>
   <li>A customizable dark/light theme toggle on the homepage allows users to personalize their browsing experience based on their preferences.</li>
   <li>Seamless integration of Google authentication on the login page provides a secure and convenient way for users to access their accounts.</li>
+  <li>Used Techs: React, Tailwind, Firebase, Javascript, Vite, MongoDB, NodeJs, ExpressJs</li>
 </ol>
