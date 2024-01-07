@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+import NavBar from '../components/NavBar';
 
 const AddProduct = () => {
     const handleAddProductSubmit = e => {
@@ -12,7 +13,7 @@ const AddProduct = () => {
         const description = form.description.value;
         const rating = form.rating.value;
         const myData = { photo, name, brand_name, type, price, description, rating };
-        fetch('https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/products', {
+        fetch('https://my-brand-shop-server-mvzb6r7dq-abrars-projects-bbcef6d7.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -34,8 +35,10 @@ const AddProduct = () => {
     }
     return (
 
-        <div className="max-w-screen-xl mx-auto my-5 p-10">
-
+        <div className="max-w-screen-xl mx-auto mt-2 mb-5">
+<div className='bg-blue-950 rounded-lg'>
+            <NavBar></NavBar>
+            </div>
             <h2 className="text-center font-semibold text-4xl my-5">Add Product Details</h2>
             <form onSubmit={handleAddProductSubmit}>
                 <div className="relative z-0 w-full mb-6 group">

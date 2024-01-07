@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 const Footer = () => {
     return (
         <div>
@@ -7,14 +5,11 @@ const Footer = () => {
 
                 <div className="flex flex-col text-center items-center justify-center">
                     <div>
-                        <h2 className="text-2xl font-bold text-white">Brand-Shop</h2>
+                        <h2 className="text-3xl font-bold text-white">Brand-Shop</h2>
                     </div>
                     <div>
-                        <NavLink to="/" className="font-semibold text-lg text-white">Home</NavLink>
                         <div className="flex gap-5">
-                            <NavLink className="font-semibold text-lg text-white" to="/login">Login</NavLink>
-                            <NavLink className="font-semibold text-lg text-white" to="/register">Register</NavLink>
-                            <NavLink className="font-semibold text-lg text-white" to="/myCart">Cart</NavLink>
+                            <small className="text-white text-xl">@copyright | Md Abrar Haider</small>
                         </div>
                     </div>
                 </div>

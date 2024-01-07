@@ -8,7 +8,7 @@ const ProductDetails = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        fetch('https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/products')
+        fetch('https://my-brand-shop-server-mvzb6r7dq-abrars-projects-bbcef6d7.vercel.app/products')
             .then(res => res.json())
             .then(data => {
                 const findProduct = data.find(product => product._id == id);
@@ -17,7 +17,7 @@ const ProductDetails = () => {
     }, [id]);
     const [cartItems, setCartItems] = useState([]);
     useEffect(() => {
-        fetch('https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/cartProducts')
+        fetch('https://my-brand-shop-server-mvzb6r7dq-abrars-projects-bbcef6d7.vercel.app/cartProducts')
             .then(res => res.json())
             .then(data => setCartItems(data));
     }, [])

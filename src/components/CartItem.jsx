@@ -15,7 +15,7 @@ const CartItem = ({ item, cartItems, setCartItems }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                const URL = `https://my-brand-shop-server-bgw2wftzx-abrars-projects-bbcef6d7.vercel.app/cartProducts/${id}`;
+                const URL = `https://my-brand-shop-server-mvzb6r7dq-abrars-projects-bbcef6d7.vercel.app/cartProducts/${id}`;
                 fetch(URL, {
                     method: "DELETE"
                 })

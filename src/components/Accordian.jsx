@@ -1,9 +1,9 @@
 
 const Accordian = () => {
     return (
-        <div className="max-w-2xl mx-auto my-10 border-2 p-10 rounded-lg">
-            <h2 className="main text-center text-4xl font-bold mb-5">Frequently Asked Questions</h2>
-            <div className="collapse collapse-arrow bg-base-200">
+        <div className="max-w-7xl mx-auto my-10 border-2 p-10 rounded-lg">
+            <h2 className="text-center lg:text-5xl font-bold mb-5 text-blue-200">Frequently Asked Questions</h2>
+            <div className="collapse collapse-arrow bg-purple-300">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div className="collapse-title text-xl font-medium">
                 What is the return policy for products purchased from Brand-Shop?
@@ -12,7 +12,7 @@ const Accordian = () => {
                     <p>We want you to be completely satisfied with your purchase. If for any reason you are not happy with your product, you can return it within 30 days of purchase for a full refund or exchange. Please review our detailed Return Policy for more information on the process.</p>
                 </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200">
+            <div className="collapse collapse-arrow bg-purple-300">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">
                 How can I track my orders shipping status?
@@ -21,7 +21,7 @@ const Accordian = () => {
                     <p>Tracking your order is easy. Once your order is shipped, you will receive a confirmation email with a tracking number and a link to our tracking page. You can use this information to monitor the status and expected delivery date of your order.</p>
                 </div>
             </div>
-            <div className="collapse collapse-arrow bg-base-200">
+            <div className="collapse collapse-arrow bg-purple-300">
                 <input type="radio" name="my-accordion-2" />
                 <div className="collapse-title text-xl font-medium">
                 Are the products on Brand-Shop website covered by a warranty?

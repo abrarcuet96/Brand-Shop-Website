@@ -10,26 +10,26 @@ const NavBar = () => {
             .catch()
     }
     const navLinks = <>
-        <li className="text-white"><NavLink
+        <li className="text-white font-semibold text-lg"><NavLink
             to="/"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400 " : ""
+                isPending ? "pending" : isActive ? "text-blue-400  font-bold" : ""
             }
         >
             Home
         </NavLink></li>
-        <li className="text-white"><NavLink
+        <li className="text-white font-semibold text-lg"><NavLink
             to="/addProducts"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400" : ""
+                isPending ? "pending" : isActive ? "text-blue-400 font-bold" : ""
             }
         >
             Add Products
         </NavLink></li>
-        <li className="text-white"><NavLink
+        <li className="text-white font-semibold text-lg"><NavLink
             to="/myCart"
             className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "text-blue-400" : ""
+                isPending ? "pending" : isActive ? "text-blue-400 font-bold" : ""
             }
         >
             My Cart
@@ -37,7 +37,7 @@ const NavBar = () => {
     </>
     return (
 
-        <div className="navbar rounded-lg max-w-screen-xl mx-auto my-5 bg-slate-900">
+        <div className="navbar rounded-lg max-w-screen-xl mx-auto mb-5">
             <div className="navbar-start">
                 <div className="dropdown gap-2">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +52,7 @@ const NavBar = () => {
                         <img className="w-8 max-sm:hidden" src="bookmark_6442280.png" alt="" />
                     </div>
                     <div>
-                        <Link className="text-lg md:text-2xl font-bold text-white" to="/">Brand-Shop</Link>
+                        <Link className="text-lg md:text-2xl font-bold text-white" to="/">BrandShop</Link>
                     </div>
                 </div>
             </div>
@@ -65,12 +65,11 @@ const NavBar = () => {
                 {user ?
                     <>
                         <div className="flex flex-row">
-                            <div className="bg-white mr-2 p-1 rounded-lg max-sm:hidden  w-full">
-                                <span className="w-30 h-2 m-2 font-semibold">{user?.displayName}</span>
-
+                            <div className=" mr-2 p-1 rounded-lg max-sm:hidden w-full">
+                                <span className="w-30 h-2 m-2 font-semibold text-blue-400">{user?.displayName}</span>
                             </div>
                             <img className="w-8 h-8 mr-2 rounded-full" src={user?.photoURL} alt="" />
-                            <button onClick={handleSignOut} className="btn btn-sm bg-white">Sign Out</button>
+                            <button onClick={handleSignOut} className="btn btn-sm bg-gradient-to-l  from-purple-900 to-violet-600 text-white border-none">Sign Out</button>
                         </div>
                     </>
                     :
