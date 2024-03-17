@@ -24,8 +24,8 @@ const SendEmail = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div
                         className="text-center lg:text-left">
-                        <h1 className="text-5xl lg:text-7xl font-bold text-blue-200">Want to learn more!</h1>
-                        <p className="py-6 text-3xl text-blue-100">Contact Us.</p>
+                        <h1 className="text-3xl lg:text-7xl font-bold text-blue-200">Want to learn more!</h1>
+                        <p className="py-6 text-xl lg:text-3xl text-blue-100">Contact Us.</p>
                     </div>
                     <div
                         className="card shrink-0 w-full max-w-sm shadow-2xl backdrop-blur-sm bg-white/30 rounded-none">
