@@ -7,6 +7,7 @@ import "./Home.css"
 import SendEmail from "../components/SendEmail/SendEmail";
 import NavBar from "../components/NavBar";
 import AboutUs from "../components/AboutUs/AboutUs";
+import Commitments from "../components/Commitments/Commitments";
 export const ThemeContext = createContext(null);
 // import ReactSwitch from "react-switch";
 const Home = () => {
@@ -31,13 +32,14 @@ const Home = () => {
         //     </div>
         // </ThemeContext.Provider>
         <div className=" bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600">
-            <div className="max-w-screen-xl mx-auto">
+            <div className="">
                 <NavBar></NavBar>
                 <Banner></Banner>
                 <AboutUs></AboutUs>
                 <BrandCards></BrandCards>
                 <SendEmail></SendEmail>
                 <Accordian></Accordian>
+                <Commitments></Commitments>
             </div>
             <Footer></Footer>
         </div>

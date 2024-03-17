@@ -1,8 +1,8 @@
 
 const Accordian = () => {
     return (
-        <div className="max-w-7xl mx-auto my-10 border-2 p-10 rounded-lg">
-            <h2 className="text-center lg:text-5xl font-bold mb-5 text-blue-200">Frequently Asked Questions</h2>
+        <div className="max-w-7xl mx-auto my-10  p-10 ">
+            <h2 className="lg:text-6xl font-bold border-b-4 border-b-[#F72798] my-8 text-white text-center">Frequently Asked Questions</h2>
             <div className="collapse collapse-arrow bg-purple-300">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div className="collapse-title text-xl font-medium">

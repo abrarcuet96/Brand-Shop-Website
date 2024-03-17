@@ -18,14 +18,14 @@ const SendEmail = () => {
             });
     };
     return (
-        <div className="section" id="contact">
-            <div className="hero min-h-[80vh]">
-            <div className="hero-overlay bg-opacity-60"></div>
+        <div className="section my-20" id="contact">
+            <div className="hero min-h-[80vh]"  style={{ backgroundImage: 'url(b4.jpg)' }}>
+            <div className="hero-overlay bg-opacity-60 "></div>
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div
                         className="text-center lg:text-left">
-                        <h1 className="text-5xl lg:text-7xl font-bold text-blue-200">Let us Connect!</h1>
-                        <p className="py-6 text-3xl text-blue-100">Ready to collaborate? Send us an email.</p>
+                        <h1 className="text-5xl lg:text-7xl font-bold text-blue-200">Want to learn more!</h1>
+                        <p className="py-6 text-3xl text-blue-100">Contact Us.</p>
                     </div>
                     <div
                         className="card shrink-0 w-full max-w-sm shadow-2xl backdrop-blur-sm bg-white/30 rounded-none">
